@@ -28,25 +28,47 @@
   <style>
     /* Slider section styles */
     .slider_section {
-      padding: 100px 0; /* Increased padding */
-      height: 750px; /* Increased height */
+      padding: 60px 0;
+      height: 600px;
       display: flex;
-      align-items: center; /* Center content vertically */
+      align-items: center;
     }
 
     .slider_section .img-box img {
       max-width: 100%;
-      height: 600px; /* Adjusted image height */
+      height: 400px;
+    }
+
+    /* Smaller H1 */
+    h1 {
+      font-size: 28px;
+    }
+
+    /* Navbar adjustments */
+    .navbar-toggler {
+      border: none;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("https://img.icons8.com/material-outlined/24/000000/menu--v1.png");
+    }
+
+    /* Fixing the hamburger menu */
+    .navbar-collapse {
+      flex-basis: 100%;
+      flex-grow: 1;
+      align-items: center;
+      justify-content: flex-end;
     }
 
     /* Info section styles */
     .info_section {
-      padding: 40px 0; /* Reduced padding */
+      padding: 30px 0;
     }
 
     /* Footer section styles */
     .footer_section {
-      padding: 20px 0; /* Reduced padding */
+      padding: 20px 0;
     }
 
     /* Language Toggle */
@@ -75,6 +97,37 @@
       display: none;
     }
 
+    /* Mobile-specific adjustments */
+    @media (max-width: 768px) {
+      /* Stack Get in Touch items vertically */
+      .info_items .row {
+        flex-direction: column;
+      }
+
+      .info_items .item {
+        margin-bottom: 15px;
+      }
+
+      .slider_section {
+        padding: 30px 0;
+        height: auto;
+      }
+
+      .slider_section .img-box img {
+        height: auto;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+
+    /* Aligning footer content */
+    .footer_section {
+      text-align: center;
+    }
+
+    /* Spacing between Get In Touch items */
     .info_items .item {
       margin: 10px 0;
     }
@@ -124,7 +177,7 @@
               <span>T.H Overseas</span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class=""> </span>
+              <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -156,7 +209,7 @@
           <div class="col-md-6">
             <div class="detail-box">
               <h1 id="heading-en">
-                T.H Overseas <br>
+                T.H Overseas <br> <br>
                 Committed to Providing Quality Recruitment Services to Your Workforce.
               </h1>
               <h1 id="heading-ar" class="hidden">
@@ -234,7 +287,6 @@
       <div class="container">
         <p>
           &copy; <span id="displayDateYear"></span> All Rights Reserved By T.H Overseas
-          
         </p>
       </div>
     </footer>
