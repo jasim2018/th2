@@ -31,19 +31,8 @@
       padding: 15px;
       margin-bottom: 10px;
       border-radius: 5px;
-      color: white;
-    }
-    .address-bg {
-      background-color: #007bff;
-    }
-    .phone-bg {
-      background-color: #28a745;
-    }
-    .arabic-bg {
-      background-color: #ffc107;
-    }
-    .email-bg {
-      background-color: #dc3545;
+      color: black;
+      background-color: white;
     }
     .contact_nav a span {
       display: inline-flex;
@@ -51,6 +40,12 @@
     }
     .contact_nav a span img {
       margin-left: 8px;
+    }
+    .navbar-toggler {
+      border: none;
+    }
+    .navbar-toggler-icon {
+      background-image: url("https://img.icons8.com/material-outlined/24/000000/menu--v1.png");
     }
   </style>
 </head>
@@ -82,7 +77,7 @@
               <span>T.H Overseas</span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class=""> </span>
+              <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -108,40 +103,52 @@
     <!-- End header section -->
   </div>
 
+  <!-- Language Toggle Section -->
+  <div class="language-toggle">
+    <button id="en-btn" class="active">English</button>
+    <button id="ar-btn">العربية</button>
+  </div>
+
   <!-- Contact section -->
   <section class="contact_section layout_padding">
     <div class="container">
       <div class="heading_container">
-        <h2>Contact Us</h2>
+        <h2 id="heading-en">Contact Us</h2>
+        <h2 id="heading-ar" class="hidden">اتصل بنا</h2>
       </div>
 
       <div class="row">
         <!-- Contact Information on the Left -->
         <div class="col-md-6">
-          <div class="custom-section address-bg">
-            <h3>T.H Overseas</h3>
-            <h4>Government Approved Recruiting License No. 1477</h4>
-            <p><strong>Address:</strong></p>
-            <p>House no. 41, Road no.17</p>
+          <div class="custom-section">
+            <h3 id="th-en">T.H Overseas</h3>
+            <h3 id="th-ar" class="hidden">تي إتش أوفرسيز</h3>
+            <h4 id="license-en">Government Approved Recruiting License No. 1477</h4>
+            <h4 id="license-ar" class="hidden">رخصة توظيف معتمدة من الحكومة رقم 1477</h4>
+            <p><strong id="address-en">Address:</strong></p>
+            <p id="addr-en">House no. 41, Road no.17</p>
+            <p id="addr-ar" class="hidden">المنزل رقم 41، الطريق رقم 17</p>
             <p>(2nd Floor), Banani</p>
             <p>Dhaka-1213, Bangladesh.</p>
           </div>
 
-          <div class="custom-section phone-bg">
-            <p><strong>Phone:</strong></p>
+          <div class="custom-section">
+            <p><strong id="phone-en">Phone:</strong></p>
             <p>+88 01733941286</p>
             <p>+88 02 719 1235</p>
             <p>+88 02 719 1292</p>
             <p>WhatsApp: <i class="fa fa-whatsapp" aria-hidden="true"></i> +88 01733941286</p>
           </div>
 
-          <div class="custom-section arabic-bg">
-            <p><strong>Arabic Speaker:</strong></p>
+          <div class="custom-section">
+            <p><strong id="arabic-en">Arabic Speaker:</strong></p>
+            <p id="arabic-ar" class="hidden">المتحدث بالعربية:</p>
             <p>+88 01922555998</p>
           </div>
 
-          <div class="custom-section email-bg">
-            <p><strong>Email:</strong></p>
+          <div class="custom-section">
+            <p><strong id="email-en">Email:</strong></p>
+            <p id="email-ar" class="hidden">البريد الإلكتروني:</p>
             <p>thoverseas1477@gmail.com</p>
           </div>
         </div>
@@ -162,7 +169,8 @@
   <!-- Info section -->
   <section class="info_section">
     <div class="container">
-      <h4>Get In Touch</h4>
+      <h4 id="info-heading-en">Get In Touch</h4>
+      <h4 id="info-heading-ar" class="hidden">ابقى على تواصل</h4>
       <div class="row">
         <div class="col-lg-10 mx-auto">
           <div class="info_items">
@@ -207,4 +215,75 @@
   <!-- Footer section -->
   <footer class="footer_section">
     <div class="container">
-      <p>&copy; <span id="displayDateYear"></span> All Rights Reserved By <a href="https://html.design/">Html Templates</a></p>
+      <p>&copy; <span id="displayDateYear"></span> All Rights Reserved By T.H Overseas</p>
+    </div>
+  </footer>
+  <!-- End footer section -->
+
+  <!-- Scripts -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="js/custom.js"></script>
+
+  <!-- Language Toggle Script -->
+  <script>
+    document.getElementById("en-btn").addEventListener("click", function () {
+      document.getElementById("heading-en").classList.remove("hidden");
+      document.getElementById("heading-ar").classList.add("hidden");
+
+      document.getElementById("th-en").classList.remove("hidden");
+      document.getElementById("th-ar").classList.add("hidden");
+
+      document.getElementById("license-en").classList.remove("hidden");
+      document.getElementById("license-ar").classList.add("hidden");
+
+      document.getElementById("addr-en").classList.remove("hidden");
+      document.getElementById("addr-ar").classList.add("hidden");
+
+      document.getElementById("phone-en").classList.remove("hidden");
+      document.getElementById("arabic-en").classList.remove("hidden");
+      document.getElementById("email-en").classList.remove("hidden");
+
+      document.getElementById("email-ar").classList.add("hidden");
+      document.getElementById("arabic-ar").classList.add("hidden");
+
+      document.getElementById("info-heading-en").classList.remove("hidden");
+      document.getElementById("info-heading-ar").classList.add("hidden");
+
+      this.classList.add("active");
+      document.getElementById("ar-btn").classList.remove("active");
+    });
+
+    document.getElementById("ar-btn").addEventListener("click", function () {
+      document.getElementById("heading-ar").classList.remove("hidden");
+      document.getElementById("heading-en").classList.add("hidden");
+
+      document.getElementById("th-ar").classList.remove("hidden");
+      document.getElementById("th-en").classList.add("hidden");
+
+      document.getElementById("license-ar").classList.remove("hidden");
+      document.getElementById("license-en").classList.add("hidden");
+
+      document.getElementById("addr-ar").classList.remove("hidden");
+      document.getElementById("addr-en").classList.add("hidden");
+
+      document.getElementById("phone-en").classList.add("hidden");
+      document.getElementById("arabic-en").classList.add("hidden");
+      document.getElementById("email-en").classList.add("hidden");
+
+      document.getElementById("email-ar").classList.remove("hidden");
+      document.getElementById("arabic-ar").classList.remove("hidden");
+
+      document.getElementById("info-heading-ar").classList.remove("hidden");
+      document.getElementById("info-heading-en").classList.add("hidden");
+
+      this.classList.add("active");
+      document.getElementById("en-btn").classList.remove("active");
+    });
+
+    document.getElementById("displayDateYear").textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
