@@ -8,14 +8,15 @@
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+  <meta name="keywords" content="recruitment, overseas, T.H Overseas, Bangladesh" />
+  <meta name="description" content="T.H Overseas - Providing Quality Recruitment Services" />
+  <meta name="author" content="T.H Overseas" />
 
   <title>T.H Overseas</title>
 
   <!-- Slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
   <!-- Bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
   <!-- Font Awesome style -->
@@ -34,18 +35,56 @@
       color: black;
       background-color: white;
     }
+
     .contact_nav a span {
       display: inline-flex;
       align-items: center;
     }
+
     .contact_nav a span img {
       margin-left: 8px;
     }
+
     .navbar-toggler {
       border: none;
     }
+
     .navbar-toggler-icon {
       background-image: url("https://img.icons8.com/material-outlined/24/000000/menu--v1.png");
+    }
+
+    /* Language Toggle */
+    .language-toggle {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+
+    .language-toggle button {
+      margin-left: 5px;
+      padding: 5px 10px;
+      border: 1px solid #007bff;
+      border-radius: 3px;
+      background-color: #fff;
+      color: #007bff;
+      cursor: pointer;
+    }
+
+    .language-toggle button.active {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    /* Mobile-specific adjustments */
+    @media (max-width: 768px) {
+      .language-toggle {
+        top: 10px;
+        right: 10px;
+      }
     }
   </style>
 </head>
@@ -56,17 +95,24 @@
     <header class="header_section">
       <div class="header_top">
         <div class="container-fluid">
-          <div class="contact_nav">
-            <a href="tel:+8801733941286">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>
-                Call : +8801733941286 <i class="fa fa-whatsapp" aria-hidden="true"></i> WhatsApp : +8801733941286
-              </span>
-            </a>
-            <a href="mailto:thoverseas1477@gmail.com">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <span>Email : thoverseas1477@gmail.com</span>
-            </a>
+          <div class="contact_nav d-flex justify-content-between align-items-center">
+            <div>
+              <a href="tel:+8801733941286">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call : +8801733941286 <i class="fa fa-whatsapp" aria-hidden="true"></i> WhatsApp : +8801733941286
+                </span>
+              </a>
+              <a href="mailto:thoverseas1477@gmail.com">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>Email : thoverseas1477@gmail.com</span>
+              </a>
+            </div>
+            <!-- Language Toggle Section placed in Header -->
+            <div class="language-toggle">
+              <button id="en-btn" class="active">English</button>
+              <button id="ar-btn">العربية</button>
+            </div>
           </div>
         </div>
       </div>
@@ -76,23 +122,29 @@
             <a class="navbar-brand" href="index.html">
               <span>T.H Overseas</span>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+              data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav">
+              <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Home</a>
+                  <a class="nav-link" href="index.html" id="nav-home-en">Home</a>
+                  <a class="nav-link hidden" href="index.html" id="nav-home-ar">الصفحة الرئيسية</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html">About</a>
+                  <a class="nav-link" href="about.html" id="nav-about-en">About</a>
+                  <a class="nav-link hidden" href="about.html" id="nav-about-ar">معلومات عنا</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="service.html">Services</a>
+                  <a class="nav-link" href="service.html" id="nav-services-en">Services</a>
+                  <a class="nav-link hidden" href="service.html" id="nav-services-ar">خدمات</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact Us</a>
+                  <a class="nav-link" href="contact.html" id="nav-contact-en">Contact Us</a>
+                  <a class="nav-link hidden" href="contact.html" id="nav-contact-ar">اتصل بنا</a>
                 </li>
               </ul>
             </div>
@@ -101,12 +153,6 @@
       </div>
     </header>
     <!-- End header section -->
-  </div>
-
-  <!-- Language Toggle Section -->
-  <div class="language-toggle">
-    <button id="en-btn" class="active">English</button>
-    <button id="ar-btn">العربية</button>
   </div>
 
   <!-- Contact section -->
@@ -125,15 +171,16 @@
             <h3 id="th-ar" class="hidden">تي إتش أوفرسيز</h3>
             <h4 id="license-en">Government Approved Recruiting License No. 1477</h4>
             <h4 id="license-ar" class="hidden">رخصة توظيف معتمدة من الحكومة رقم 1477</h4>
-            <p><strong id="address-en">Address:</strong></p>
+            <p><strong id="address-en">Address:</strong><strong id="address-ar" class="hidden">العنوان:</strong></p>
             <p id="addr-en">House no. 41, Road no.17</p>
             <p id="addr-ar" class="hidden">المنزل رقم 41، الطريق رقم 17</p>
-            <p>(2nd Floor), Banani</p>
+            <p id="floor-en">(2nd Floor), Banani</p>
+            <p id="floor-ar" class="hidden">(الطابق الثاني)، بناني</p>
             <p>Dhaka-1213, Bangladesh.</p>
           </div>
 
           <div class="custom-section">
-            <p><strong id="phone-en">Phone:</strong></p>
+            <p><strong id="phone-en">Phone:</strong><strong id="phone-ar" class="hidden">هاتف:</strong></p>
             <p>+88 01733941286</p>
             <p>+88 02 719 1235</p>
             <p>+88 02 719 1292</p>
@@ -141,14 +188,12 @@
           </div>
 
           <div class="custom-section">
-            <p><strong id="arabic-en">Arabic Speaker:</strong></p>
-            <p id="arabic-ar" class="hidden">المتحدث بالعربية:</p>
+            <p><strong id="arabic-en">Arabic Speaker:</strong><strong id="arabic-ar" class="hidden">المتحدث بالعربية:</strong></p>
             <p>+88 01922555998</p>
           </div>
 
           <div class="custom-section">
-            <p><strong id="email-en">Email:</strong></p>
-            <p id="email-ar" class="hidden">البريد الإلكتروني:</p>
+            <p><strong id="email-en">Email:</strong><strong id="email-ar" class="hidden">البريد الإلكتروني:</strong></p>
             <p>thoverseas1477@gmail.com</p>
           </div>
         </div>
@@ -157,7 +202,9 @@
         <div class="col-md-6">
           <div class="map_container">
             <div class="map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.7149523707785!2d90.40103377615286!3d23.79316277864128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7d534db6067%3A0x37a5ffe0923d1d85!2sT.H%20OVERSEAS%20RL-1477!5e0!3m2!1sen!2sbd!4v1728361991569!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.7149523707785!2d90.40103377615286!3d23.79316277864128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7d534db6067%3A0x37a5ffe0923d1d85!2sT.H%20OVERSEAS%20RL-1477!5e0!3m2!1sen!2sbd!4v1728361991569!5m2!1sen!2sbd"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
           </div>
         </div>
@@ -181,7 +228,8 @@
                     <div class="img-box">
                       <i class="fa fa-map-marker" aria-hidden="true"></i>
                     </div>
-                    <p>T.H Overseas</p>
+                    <p id="info-address-en">T.H Overseas</p>
+                    <p id="info-address-ar" class="hidden">تي إتش أوفرسيز</p>
                   </div>
                 </a>
               </div>
@@ -223,12 +271,23 @@
   <!-- Scripts -->
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <script src="js/custom.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
   <!-- Language Toggle Script -->
   <script>
     document.getElementById("en-btn").addEventListener("click", function () {
+      // Header navigation
+      document.getElementById("nav-home-en").classList.remove("hidden");
+      document.getElementById("nav-about-en").classList.remove("hidden");
+      document.getElementById("nav-services-en").classList.remove("hidden");
+      document.getElementById("nav-contact-en").classList.remove("hidden");
+      document.getElementById("nav-home-ar").classList.add("hidden");
+      document.getElementById("nav-about-ar").classList.add("hidden");
+      document.getElementById("nav-services-ar").classList.add("hidden");
+      document.getElementById("nav-contact-ar").classList.add("hidden");
+
+      // Main content
       document.getElementById("heading-en").classList.remove("hidden");
       document.getElementById("heading-ar").classList.add("hidden");
 
@@ -238,24 +297,46 @@
       document.getElementById("license-en").classList.remove("hidden");
       document.getElementById("license-ar").classList.add("hidden");
 
+      document.getElementById("address-en").classList.remove("hidden");
+      document.getElementById("address-ar").classList.add("hidden");
+
       document.getElementById("addr-en").classList.remove("hidden");
       document.getElementById("addr-ar").classList.add("hidden");
 
-      document.getElementById("phone-en").classList.remove("hidden");
-      document.getElementById("arabic-en").classList.remove("hidden");
-      document.getElementById("email-en").classList.remove("hidden");
+      document.getElementById("floor-en").classList.remove("hidden");
+      document.getElementById("floor-ar").classList.add("hidden");
 
-      document.getElementById("email-ar").classList.add("hidden");
+      document.getElementById("phone-en").classList.remove("hidden");
+      document.getElementById("phone-ar").classList.add("hidden");
+
+      document.getElementById("arabic-en").classList.remove("hidden");
       document.getElementById("arabic-ar").classList.add("hidden");
+
+      document.getElementById("email-en").classList.remove("hidden");
+      document.getElementById("email-ar").classList.add("hidden");
 
       document.getElementById("info-heading-en").classList.remove("hidden");
       document.getElementById("info-heading-ar").classList.add("hidden");
+
+      document.getElementById("info-address-en").classList.remove("hidden");
+      document.getElementById("info-address-ar").classList.add("hidden");
 
       this.classList.add("active");
       document.getElementById("ar-btn").classList.remove("active");
     });
 
     document.getElementById("ar-btn").addEventListener("click", function () {
+      // Header navigation
+      document.getElementById("nav-home-en").classList.add("hidden");
+      document.getElementById("nav-about-en").classList.add("hidden");
+      document.getElementById("nav-services-en").classList.add("hidden");
+      document.getElementById("nav-contact-en").classList.add("hidden");
+      document.getElementById("nav-home-ar").classList.remove("hidden");
+      document.getElementById("nav-about-ar").classList.remove("hidden");
+      document.getElementById("nav-services-ar").classList.remove("hidden");
+      document.getElementById("nav-contact-ar").classList.remove("hidden");
+
+      // Main content
       document.getElementById("heading-ar").classList.remove("hidden");
       document.getElementById("heading-en").classList.add("hidden");
 
@@ -265,18 +346,29 @@
       document.getElementById("license-ar").classList.remove("hidden");
       document.getElementById("license-en").classList.add("hidden");
 
+      document.getElementById("address-ar").classList.remove("hidden");
+      document.getElementById("address-en").classList.add("hidden");
+
       document.getElementById("addr-ar").classList.remove("hidden");
       document.getElementById("addr-en").classList.add("hidden");
 
+      document.getElementById("floor-ar").classList.remove("hidden");
+      document.getElementById("floor-en").classList.add("hidden");
+
+      document.getElementById("phone-ar").classList.remove("hidden");
       document.getElementById("phone-en").classList.add("hidden");
+
+      document.getElementById("arabic-ar").classList.remove("hidden");
       document.getElementById("arabic-en").classList.add("hidden");
-      document.getElementById("email-en").classList.add("hidden");
 
       document.getElementById("email-ar").classList.remove("hidden");
-      document.getElementById("arabic-ar").classList.remove("hidden");
+      document.getElementById("email-en").classList.add("hidden");
 
       document.getElementById("info-heading-ar").classList.remove("hidden");
       document.getElementById("info-heading-en").classList.add("hidden");
+
+      document.getElementById("info-address-ar").classList.remove("hidden");
+      document.getElementById("info-address-en").classList.add("hidden");
 
       this.classList.add("active");
       document.getElementById("en-btn").classList.remove("active");
