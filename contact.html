@@ -28,12 +28,23 @@
 
   <!-- Custom CSS -->
   <style>
+    /* Header background color */
+    .header_section {
+      background-color: #d0e7ff; /* Light blue */
+    }
+
+    /* Contact section background color same as header */
+    .contact_section {
+      background-color: #d0e7ff; /* Light blue */
+    }
+
+    /* Specific sections with light black background */
     .custom-section {
       padding: 15px;
       margin-bottom: 10px;
       border-radius: 5px;
-      color: black;
-      background-color: white;
+      color: white;
+      background-color: #2e2e2e; /* Light black shade */
     }
 
     .contact_nav a span {
@@ -103,9 +114,9 @@
                   Call : +8801733941286 <i class="fa fa-whatsapp" aria-hidden="true"></i> WhatsApp : +8801733941286
                 </span>
               </a>
-              <a href="mailto:thoverseas1477@gmail.com">
+              <a href="mailto:thoverseas1477@hotmail.com">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>Email : thoverseas1477@gmail.com</span>
+                <span>Email : thoverseas1477@hotmail.com</span>
               </a>
             </div>
             <!-- Language Toggle Section placed in Header -->
@@ -120,7 +131,7 @@
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container">
             <a class="navbar-brand" href="index.html">
-              <span>T.H Overseas</span>
+              <span>T.H Overseas <img src="images/logo.jpg" alt=" thoverseas logo " width="70" height="60"></span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
               data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -177,24 +188,29 @@
             <p id="floor-en">(2nd Floor), Banani</p>
             <p id="floor-ar" class="hidden">(الطابق الثاني)، بناني</p>
             <p>Dhaka-1213, Bangladesh.</p>
+           <p id="addr-ar" class="hidden">دكا-١٢١٣، بنغلاديش</p>
           </div>
 
           <div class="custom-section">
             <p><strong id="phone-en">Phone:</strong><strong id="phone-ar" class="hidden">هاتف:</strong></p>
             <p>+88 01733941286</p>
-            <p>+88 02 719 1235</p>
-            <p>+88 02 719 1292</p>
+            <p>+88 01711266769</p>
+            <p>+88 0241080298</p>
+            <p>+88 0241080398</p>
             <p>WhatsApp: <i class="fa fa-whatsapp" aria-hidden="true"></i> +88 01733941286</p>
           </div>
 
-          <div class="custom-section">
+
+
+          <div class="custom-section"  >
+
             <p><strong id="arabic-en">Arabic Speaker:</strong><strong id="arabic-ar" class="hidden">المتحدث بالعربية:</strong></p>
             <p>+88 01922555998</p>
           </div>
 
           <div class="custom-section">
             <p><strong id="email-en">Email:</strong><strong id="email-ar" class="hidden">البريد الإلكتروني:</strong></p>
-            <p>thoverseas1477@gmail.com</p>
+            <p>thoverseas1477@hotmail.com</p>
           </div>
         </div>
 
@@ -211,171 +227,98 @@
       </div>
     </div>
   </section>
-  <!-- End contact section -->
+ <!-- Compact Info Section -->
+    <section class="info_section">
+      <div class="container">
+       <h4 id="heading-en">
+ Feel Free to Call Us Anytime </br>
+<p style="color:green;">لا تتردد في الاتصال بنا في أي وقت</p></h4>
 
-  <!-- Info section -->
-  <section class="info_section">
-    <div class="container">
-      <h4 id="info-heading-en">Get In Touch</h4>
-      <h4 id="info-heading-ar" class="hidden">ابقى على تواصل</h4>
-      <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <div class="info_items">
-            <div class="row">
-              <div class="col-md-4">
-                <a href="">
-                  <div class="item">
-                    <div class="img-box">
-                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+<h4 id="heading-ar" class="hidden">
+Call US </h4>
+
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="info_items">
+              <div class="row">
+                <div class="col-md-4">
+                  <a href="https://goo.gl/maps/someaddress" target="_blank">
+                    <div class="item">
+                      <div class="img-box">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      </div>
+                      <p>House# 41,Road#17 </br>
+
+                         Banani, Dhaka1213</br>
+                         Bangladesh</p>
                     </div>
-                    <p id="info-address-en">T.H Overseas</p>
-                    <p id="info-address-ar" class="hidden">تي إتش أوفرسيز</p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-4">
-                <a href="tel:+8801733941286">
-                  <div class="item">
-                    <div class="img-box">
-                      <i class="fa fa-phone" aria-hidden="true"></i>
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <a href="tel:+8801733941286">
+                    <div class="item">
+                      <div class="img-box">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </div>
+                      <p>+8801733941286</p>
                     </div>
-                    <p>+8801733941286</p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-4">
-                <a href="mailto:thoverseas1477@gmail.com">
-                  <div class="item">
-                    <div class="img-box">
-                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <a href="mailto:thoverseas1477@hotmail.com">
+                    <div class="item">
+                      <div class="img-box">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                      </div>
+                      <p>thoverseas1477@hotmail.com</p>
                     </div>
-                    <p>thoverseas1477@gmail.com</p>
-                  </div>
-                </a>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-  </section>
-  <!-- End info section -->
+    </section>
+    <!-- End info section -->
+
+
 
   <!-- Footer section -->
-  <footer class="footer_section">
-    <div class="container">
-      <p>&copy; <span id="displayDateYear"></span> All Rights Reserved By T.H Overseas</p>
-    </div>
+  <footer class="container-fluid footer_section">
+    <p>Copyright &copy; 2023 T.H Overseas. All Rights Reserved.</p>
   </footer>
-  <!-- End footer section -->
 
-  <!-- Scripts -->
+  <!-- Script files -->
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+  // Function to toggle between English and Arabic
+  document.getElementById("en-btn").addEventListener("click", function () {
+    toggleLanguage("en");
+  });
 
-  <!-- Language Toggle Script -->
-  <script>
-    document.getElementById("en-btn").addEventListener("click", function () {
-      // Header navigation
-      document.getElementById("nav-home-en").classList.remove("hidden");
-      document.getElementById("nav-about-en").classList.remove("hidden");
-      document.getElementById("nav-services-en").classList.remove("hidden");
-      document.getElementById("nav-contact-en").classList.remove("hidden");
-      document.getElementById("nav-home-ar").classList.add("hidden");
-      document.getElementById("nav-about-ar").classList.add("hidden");
-      document.getElementById("nav-services-ar").classList.add("hidden");
-      document.getElementById("nav-contact-ar").classList.add("hidden");
+  document.getElementById("ar-btn").addEventListener("click", function () {
+    toggleLanguage("ar");
+  });
 
-      // Main content
-      document.getElementById("heading-en").classList.remove("hidden");
-      document.getElementById("heading-ar").classList.add("hidden");
+  function toggleLanguage(lang) {
+    const englishElements = document.querySelectorAll("[id$='-en']");
+    const arabicElements = document.querySelectorAll("[id$='-ar']");
 
-      document.getElementById("th-en").classList.remove("hidden");
-      document.getElementById("th-ar").classList.add("hidden");
-
-      document.getElementById("license-en").classList.remove("hidden");
-      document.getElementById("license-ar").classList.add("hidden");
-
-      document.getElementById("address-en").classList.remove("hidden");
-      document.getElementById("address-ar").classList.add("hidden");
-
-      document.getElementById("addr-en").classList.remove("hidden");
-      document.getElementById("addr-ar").classList.add("hidden");
-
-      document.getElementById("floor-en").classList.remove("hidden");
-      document.getElementById("floor-ar").classList.add("hidden");
-
-      document.getElementById("phone-en").classList.remove("hidden");
-      document.getElementById("phone-ar").classList.add("hidden");
-
-      document.getElementById("arabic-en").classList.remove("hidden");
-      document.getElementById("arabic-ar").classList.add("hidden");
-
-      document.getElementById("email-en").classList.remove("hidden");
-      document.getElementById("email-ar").classList.add("hidden");
-
-      document.getElementById("info-heading-en").classList.remove("hidden");
-      document.getElementById("info-heading-ar").classList.add("hidden");
-
-      document.getElementById("info-address-en").classList.remove("hidden");
-      document.getElementById("info-address-ar").classList.add("hidden");
-
-      this.classList.add("active");
-      document.getElementById("ar-btn").classList.remove("active");
-    });
-
-    document.getElementById("ar-btn").addEventListener("click", function () {
-      // Header navigation
-      document.getElementById("nav-home-en").classList.add("hidden");
-      document.getElementById("nav-about-en").classList.add("hidden");
-      document.getElementById("nav-services-en").classList.add("hidden");
-      document.getElementById("nav-contact-en").classList.add("hidden");
-      document.getElementById("nav-home-ar").classList.remove("hidden");
-      document.getElementById("nav-about-ar").classList.remove("hidden");
-      document.getElementById("nav-services-ar").classList.remove("hidden");
-      document.getElementById("nav-contact-ar").classList.remove("hidden");
-
-      // Main content
-      document.getElementById("heading-ar").classList.remove("hidden");
-      document.getElementById("heading-en").classList.add("hidden");
-
-      document.getElementById("th-ar").classList.remove("hidden");
-      document.getElementById("th-en").classList.add("hidden");
-
-      document.getElementById("license-ar").classList.remove("hidden");
-      document.getElementById("license-en").classList.add("hidden");
-
-      document.getElementById("address-ar").classList.remove("hidden");
-      document.getElementById("address-en").classList.add("hidden");
-
-      document.getElementById("addr-ar").classList.remove("hidden");
-      document.getElementById("addr-en").classList.add("hidden");
-
-      document.getElementById("floor-ar").classList.remove("hidden");
-      document.getElementById("floor-en").classList.add("hidden");
-
-      document.getElementById("phone-ar").classList.remove("hidden");
-      document.getElementById("phone-en").classList.add("hidden");
-
-      document.getElementById("arabic-ar").classList.remove("hidden");
-      document.getElementById("arabic-en").classList.add("hidden");
-
-      document.getElementById("email-ar").classList.remove("hidden");
-      document.getElementById("email-en").classList.add("hidden");
-
-      document.getElementById("info-heading-ar").classList.remove("hidden");
-      document.getElementById("info-heading-en").classList.add("hidden");
-
-      document.getElementById("info-address-ar").classList.remove("hidden");
-      document.getElementById("info-address-en").classList.add("hidden");
-
-      this.classList.add("active");
+    if (lang === "ar") {
+      englishElements.forEach(el => el.classList.add("hidden"));
+      arabicElements.forEach(el => el.classList.remove("hidden"));
+      document.getElementById("ar-btn").classList.add("active");
       document.getElementById("en-btn").classList.remove("active");
-    });
-
-    document.getElementById("displayDateYear").textContent = new Date().getFullYear();
-  </script>
+    } else {
+      englishElements.forEach(el => el.classList.remove("hidden"));
+      arabicElements.forEach(el => el.classList.add("hidden"));
+      document.getElementById("en-btn").classList.add("active");
+      document.getElementById("ar-btn").classList.remove("active");
+    }
+  }
+</script>
 </body>
 
 </html>
