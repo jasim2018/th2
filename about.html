@@ -65,6 +65,28 @@
 
 
 
+custom_nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-toggler {
+    margin-left: auto; /* Pushes the toggler to the right */
+}
+
+.img-box img {
+    width: 100%; /* Ensures the image fills the container width */
+    height: auto; /* Maintains aspect ratio */
+}
+
+@media only screen and (max-width: 600px) {
+    .img-box img {
+        max-width: 100%; /* Limit the width on mobile */
+    }
+}
+
+
     /* Info section styles */
     .info_section {
       padding: 40px 0; /* Reduced padding */
