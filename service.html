@@ -40,6 +40,31 @@
       height: 600px; /* Adjusted image height */
     }
 
+
+
+media only screen and (max-width: 600px) {
+      .header_top .contact_nav {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+      }
+
+      /* Center each contact item in a row */
+      .header_top .contact_nav a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px 0;
+      }
+
+      /* Make the language toggle stay centered at the same spot */
+      .language-toggle {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+
 .navbar-brand {
     font-size: 20px; /* Default font size for desktop */
     display: flex;
@@ -160,12 +185,19 @@ body {
         <div class="container-fluid">
           <div class="contact_nav d-flex justify-content-between align-items-center">
             <div>
+              <!-- Phone Contact -->
               <a href="tel:+8801733941286">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
-                  Call : +8801733941286 <i class="fa fa-whatsapp" aria-hidden="true"></i> WhatsApp : +8801733941286
+                  Call : +8801733941286 
                 </span>
               </a>
+              <!-- WhatsApp Contact -->
+              <a href="https://wa.me/8801733941286">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                <span>WhatsApp : +8801733941286</span>
+              </a>
+              <!-- Email Contact -->
               <a href="mailto:thoverseas1477@hotmail.com">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <span>Email : thoverseas1477@hotmail.com</span>
