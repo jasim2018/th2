@@ -65,6 +65,42 @@
       background-image: url("https://img.icons8.com/material-outlined/24/000000/menu--v1.png");
     }
 
+.navbar-brand {
+    font-size: 20px; /* Default font size for desktop */
+    display: flex;
+    align-items: center; /* Align logo and text */
+}
+
+.navbar-logo {
+    width: 70px; /* Default size for logo */
+    height: 60px;
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar-brand {
+        font-size: 16px; /* Adjust font size for mobile */
+        padding: 5px; /* Optional: add padding for spacing */
+    }
+
+    .navbar-logo {
+        width: 50px; /* Smaller logo for mobile */
+        height: 45px;
+    }
+}
+/* Align the hamburger menu to the right */
+.custom_nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-toggler {
+    margin-left: auto; /* Pushes the toggler to the right */
+}
+
+
+
+
     /* Language Toggle */
     .language-toggle {
       position: absolute;
@@ -141,9 +177,16 @@ body {
       <div class="header_bottom">
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container">
+
             <a class="navbar-brand" href="index.html">
-              <span style="text-transform: capitalize;"><img src="images/LOGO.jpg" alt=" thoverseas logo " width="70" height="60">T.H Overseas-Recruiting License No. RL-1477 </span>
-            </a>
+    <span style="text-transform: capitalize;">
+        <img src="images/LOGO.jpg" alt="thoverseas logo" width="70" height="60" class="navbar-logo">
+        T.H Overseas-Recruiting License No. RL-1477
+    </span>
+</a>
+
+
+
             <button class="navbar-toggler" type="button" data-toggle="collapse"
               data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
               aria-label="Toggle navigation">
@@ -248,48 +291,45 @@ body {
 <h4 id="heading-ar" class="hidden">
 Call US </h4>
 
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <div class="info_items">
-              <div class="row">
-                <div class="col-md-4">
-                  <a href="https://goo.gl/maps/someaddress" target="_blank">
-                    <div class="item">
-                      <div class="img-box">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                      </div>
-                      <p>House# 41,Road#17 </br>
-
-                         Banani, Dhaka1213</br>
-                         Bangladesh</p>
-                    </div>
-                  </a>
+       <div class="row">
+    <div class="col-lg-8 mx-auto">
+        <div class="info_items">
+            <div class="row">
+                <div class="col-4"> <!-- Changed from col-md-4 to col-4 -->
+                    <a href="https://goo.gl/maps/someaddress" target="_blank">
+                        <div class="item">
+                            <div class="img-box">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            </div>
+                            <p>House# 41, Road#17 <br> Banani, Dhaka1213 <br> Bangladesh</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-md-4">
-                  <a href="tel:+8801733941286">
-                    <div class="item">
-                      <div class="img-box">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
-                      </div>
-                      <p>+8801733941286</p>
-                    </div>
-                  </a>
+                <div class="col-4"> <!-- Changed from col-md-4 to col-4 -->
+                    <a href="tel:+8801733941286">
+                        <div class="item">
+                            <div class="img-box">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </div>
+                            <p>+8801733941286</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-md-4">
-                  <a href="mailto:thoverseas1477@hotmail.com">
-                    <div class="item">
-                      <div class="img-box">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                      </div>
-                      <p>thoverseas1477@hotmail.com</p>
-                    </div>
-                  </a>
+                <div class="col-4"> <!-- Changed from col-md-4 to col-4 -->
+                    <a href="mailto:thoverseas1477@hotmail.com">
+                        <div class="item">
+                            <div class="img-box">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <p>thoverseas1477@hotmail.com</p>
+                        </div>
+                    </a>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
+</div>
+
     </section>
     <!-- End info section -->
 
